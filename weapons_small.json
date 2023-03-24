@@ -1,0 +1,32 @@
+{
+  "Assault Rifles": [
+    "Lachmann-556"
+  ],
+  "Battle Rifles": [
+    "Lachmann-762"
+  ],
+  "Sub Machine Guns": [
+    "Bas-P"
+  ],
+  "Shotguns": [
+    "Bryson 800"
+  ],
+  "Light Machine Guns": [
+    "HCR 56"
+  ],
+  "Marksman Rifles": [
+    "SP-R 208"
+  ],
+  "Sniper Rifles": [
+    "SP-X 80"
+  ],
+  "Handguns": [
+    "X13 Auto"
+  ],
+  "Launchers": [
+    "Pila"
+  ],
+  "Melee": [
+    "Combat Knife"
+  ]
+}

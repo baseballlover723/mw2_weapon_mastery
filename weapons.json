@@ -1,0 +1,82 @@
+{
+  "Assault Rifles": [
+    "M4",
+    "Taq-56",
+    "Kastov 762",
+    "Lachmann-556",
+    "STB 556",
+    "M16",
+    "Kastov-74U",
+    "Kastov 545",
+    "Chimera",
+    "M13B",
+    "ISO Hemlock"
+  ],
+  "Battle Rifles": [
+    "Lachmann-762",
+    "SO-14",
+    "TAQ-V",
+    "FTAC Recon"
+  ],
+  "Sub Machine Guns": [
+    "Vel 46",
+    "MX9",
+    "Lachmann Sub",
+    "Vaznev-9K",
+    "FSS Hurricane",
+    "Minibak",
+    "Bas-P",
+    "PDSW 528",
+    "Fennec 45"
+  ],
+  "Shotguns": [
+    "Lockwood 300",
+    "Expedite 12",
+    "Bryson 800",
+    "Bryson 890",
+    "KV Broadside"
+  ],
+  "Light Machine Guns": [
+    "Sakin MG38",
+    "HCR 56",
+    "556 Icarus",
+    "RAAL MG",
+    "RPK",
+    "RAPP H"
+  ],
+  "Marksman Rifles": [
+    "EBR-14",
+    "SP-R 208",
+    "LM-S",
+    "Lockwood MK2",
+    "SA-B 50",
+    "TAQ-M",
+    "Tempus Torrent",
+    "Crossbow"
+  ],
+  "Sniper Rifles": [
+    "MCPR-300",
+    "Victus XMR",
+    "Signal 50",
+    "LA-B 330",
+    "SP-X 80"
+  ],
+  "Handguns": [
+    "P890",
+    ".50 GS",
+    "X12",
+    "Basilisk",
+    "X13 Auto"
+  ],
+  "Launchers": [
+    "Pila",
+    "Strela-P",
+    "Jokr",
+    "RPG-7"
+  ],
+  "Melee": [
+    "Riot Shield",
+    "Combat Knife",
+    "Dual Kodachis"
+  ]
+}
