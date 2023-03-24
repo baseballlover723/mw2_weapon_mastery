@@ -1,0 +1,4 @@
+[submodule "tessdata"]
+	shallow = true
+	path = tessdata
+	url = https://github.com/tesseract-ocr/tessdata.git

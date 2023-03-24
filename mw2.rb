@@ -6,6 +6,7 @@ require 'colorize'
 TIMES = {seconds: 1000.0, minutes: 60.0, hours: 60.0, days: 24.0, months: (365.25 / 12), years: 12.0}
 # JSON_PATH = 'weapons.json'
 JSON_PATH = 'weapons_small.json'
+TESSDATA_PATH = './tessdata/'
 
 class WeaponClass
   def initialize(name, gun_names)
@@ -123,7 +124,8 @@ def main
       # progress = `tesseract -c load_system_dawg=0 -c load_freq_dawg=0 -c load_unambig_dawg=0 -c load_bigram_dawg=0 -c tessedit_char_whitelist=0123456789/ '#{img}' stdout`
       # puts "#{File.basename(img)}: #{progress} (#{progress.empty?})"# if img.include?('flat')
 
-      progress = `TESSDATA_PREFIX=~/tessdata/ tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{img}' stdout`.strip
+      progress = `TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{img}' stdout`.strip
+      # progress = `TESSDATA_PREFIX=~/tessdata/ tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{img}' stdout`.strip
       # progress = `TESSDATA_PREFIX=~/tessdata/ tesseract --oem 0 --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{img}' stdout`.strip
 
       gun_class_name = File.basename(File.dirname(File.dirname(img)))
