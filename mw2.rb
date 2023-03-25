@@ -20,13 +20,14 @@ def main
   pool = Concurrent::FixedThreadPool.new(THREADS)
 
   gun_images = Dir.glob('./runs/**/*.png', File::FNM_DOTMATCH).reject do |img|
-    img.end_with?('full.png') || img.end_with?('test.png') || img.include?('/flat/')
+    img.end_with?('full.png') || img.end_with?('test.png') || img.include?('/flat/') || img.end_with?('_processed.png')
   end
   done_count = 0
   gun_images.each do |img|
     pool.post do
-      `convert '#{img}' -monochrome -channel RGB -negate '#{img}'`
-      progress = `TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{img}' stdout`.strip
+      processed_img = File.dirname(img) + "/" + File.basename(img, File.extname(img)) + "_processed" + File.extname(img)
+      `convert '#{img}' -monochrome -channel RGB -negate '#{processed_img}'` unless File.exists?(processed_img)
+      progress = `TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{processed_img}' stdout`.strip
 
       gun_class_name = File.basename(File.dirname(File.dirname(img)))
       gun_name = File.basename(File.dirname(img))
