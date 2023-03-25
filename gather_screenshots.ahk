@@ -159,7 +159,7 @@ TakeScreenshot(WeaponClassName, gun) {
   Send "2"
   Sleep ScreenshotTime
 
-;  SaveScreenshot(WeaponClassName, gun, "full")
+  SaveScreenshot(WeaponClassName, gun, "full")
   SaveScreenshot(WeaponClassName, gun, "gold")
   SaveScreenshot(WeaponClassName, gun, "plat")
   SaveScreenshot(WeaponClassName, gun, "poly")
