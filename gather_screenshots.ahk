@@ -6,7 +6,8 @@ RunDir := "./runs"
 SleepTime := 100
 NewScreenTime := 400
 ScreenshotTime := 100
-Modes := Map("full", 1, "gold", "678|485|92|25", "plat", "1328|485|92|25", "poly", "678|1049|92|25", "orion", "1328|1049|92|25")
+Modes := Map("full", 1, "gold", "678|485|92|25", "plat", "1328|485|92|25", "poly", "680|1049|92|25", "orion", "1328|1049|92|25")
+Locked := {X1: 1635, Y1: 485, X2: 1670, Y2: 500, Color: 0xe7e7e7, Variation: 2}
 x := 0
 y := 0
 
@@ -175,7 +176,6 @@ TakeScreenshot(WeaponClassName, gun) {
 SaveScreenshot(WeaponClassName, gun, mode) {
   global RunDir
   global Modes
-  global oI
   path := RunDir . "/" . WeaponClassName . "/" . gun . "/" . mode . ".png"
   img:=Gdip_Bitmapfromscreen(Modes[mode])
   Gdip_SaveBitmapToFile(img, path)
@@ -204,6 +204,12 @@ NextGun()
   }
 }
 
+CheckUnlocked() {
+  outputX := 0
+  outputY := 0
+  return !PixelSearch(&outputX, &outputY, Locked.X1, Locked.Y1, Locked.X2, Locked.Y2, Locked.Color, Locked.Variation)
+}
+
 WeaponClass(WeaponClassName, Guns) {
   global First
   First := True
@@ -213,7 +219,9 @@ WeaponClass(WeaponClassName, Guns) {
 ;    if (index = 1) { ; DEBUG
 ;    continue ; DEBUG
 ;    } ; DEBUG
-    TakeScreenshot(WeaponClassName, gun)
+    if (CheckUnlocked()) {
+      TakeScreenshot(WeaponClassName, gun)
+    }
 ;    break
   }
 }
