@@ -33,7 +33,8 @@ Weapons := [
       "TAQ-V",
       "Lachmann-762",
       "SO-14",
-      "FTAC Recon"
+      "FTAC Recon",
+      "Cronen Squall"
     ]
   }, {
     Name: "Sub Machine Guns",
@@ -86,7 +87,8 @@ Weapons := [
       "SP-X 80",
       "MCPR-300",
       "Victus XMR",
-      "Signal 50"
+      "Signal 50",
+      "FJX Imperium"
     ]
   }, {
     Name: "Handguns",
