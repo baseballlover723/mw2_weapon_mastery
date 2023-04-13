@@ -31,7 +31,7 @@ def main
       processed_img = File.dirname(img) + "/" + File.basename(img, File.extname(img)) + "_processed" + File.extname(img)
 
       `convert '#{img}' -monochrome -channel RGB -negate '#{processed_img}'` unless File.exists?(processed_img)
-      progress = `TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{processed_img}' stdout`.strip
+      progress = normalize_progress(`TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{processed_img}' stdout`, gun_class_name, gun_name, mastery)
       gun_map[gun_class_name][gun_name][mastery] = calc_progress(progress)
 
       done_count += 1
@@ -44,6 +44,17 @@ def main
   puts ""
 
   print_gun_map(gun_map)
+end
+
+def normalize_progress(progress, gun_class_name, gun_name, mastery)
+  progress = progress.strip
+  progress = progress.chomp("/#{MASTERY[mastery]}")
+  if progress.end_with?("7#{MASTERY[mastery]}")
+    old_progress = progress
+    progress = progress.chomp("7#{MASTERY[mastery]}") # sometimes / is misread as 7
+    puts "\r#{gun_class_name}/#{gun_name}: '/' misread as '7' '#{old_progress}' -> '#{progress}'".light_yellow
+  end
+  progress
 end
 
 def calc_progress(str)
