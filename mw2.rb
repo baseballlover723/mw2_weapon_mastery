@@ -30,8 +30,12 @@ def main
       mastery = File.basename(img, ".png").to_sym
       processed_img = File.dirname(img) + "/" + File.basename(img, File.extname(img)) + "_processed" + File.extname(img)
 
-      `convert '#{img}' -colors 2 -monochrome -channel RGB -negate '#{processed_img}'` unless File.exists?(processed_img)
-      progress = normalize_progress(`TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{processed_img}' stdout`, gun_class_name, gun_name, mastery)
+      progress = ''
+      number_colors = `convert '#{img}' -fuzz 5% -fill black -draw 'color 0,0 floodfill' -unique-colors -depth 8 txt:-`.split("\n").size - 1
+      if number_colors != 1
+        `convert '#{img}' -monochrome -channel RGB -negate '#{processed_img}'` unless File.exists?(processed_img)
+        progress = normalize_progress(`TESSDATA_PREFIX=#{TESSDATA_PATH} tesseract --psm 6 -c load_number_dawg=1 -c tessedit_char_whitelist=0123456789/ '#{processed_img}' stdout`, gun_class_name, gun_name, mastery)
+      end
       gun_map[gun_class_name][gun_name][mastery] = calc_progress(progress)
 
       done_count += 1
