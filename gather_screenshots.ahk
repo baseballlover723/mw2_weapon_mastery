@@ -126,9 +126,9 @@ MySend(keys*) {
 
 CreateRunDir() {
   global RunDir
-  if (DirExist(RunDir)) {
-    DirDelete RunDir, 1
-  }
+  ;if (DirExist(RunDir)) {
+  ;  DirDelete RunDir, 1
+  ;}
   DirCreate RunDir
 }
 
@@ -139,6 +139,9 @@ CreateWeaponClassDir(WeaponClass) {
 
 CreateWeaponDir(WeaponClass, WeaponName) {
   global RunDir
+  if (DirExist(RunDir)) {
+    DirDelete RunDir . "/" . WeaponClass . "/" . WeaponName, 1
+  }
   DirCreate RunDir . "/" . WeaponClass . "/" . WeaponName
 }
 
