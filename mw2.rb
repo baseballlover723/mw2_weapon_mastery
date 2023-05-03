@@ -76,6 +76,8 @@ def print_gun_map(gun_map)
   rows = []
   totals = {gold: 0, plat: 0, poly: 0, orion: 0}
   total_guns = 0
+  total_kills = 0
+  max_kills = 0
 
   json.each do |weapon_class, guns|
     weapon_class_totals = {gold: 0, plat: 0, poly: 0, orion: 0}
@@ -86,6 +88,8 @@ def print_gun_map(gun_map)
 
       row = ["  " + gun_name, print_row(masteries, :gold, weapon_class_totals), print_row(masteries, :plat, weapon_class_totals), print_row(masteries, :poly, weapon_class_totals), print_row(masteries, :orion, weapon_class_totals)]
       rows << row
+      max_kills += 1_000
+      total_kills += sum_kills(masteries)
     end
     rows.insert(-weapon_class_total_guns - 1, print_weapon_class(weapon_class, weapon_class_totals, weapon_class_total_guns))
 
@@ -102,6 +106,15 @@ def print_gun_map(gun_map)
 
   table = Terminal::Table.new(rows: rows, headings: ['Name', 'Gold', 'Platinum', 'Polyatomic', 'Orion'])
   puts table
+
+  puts "total kill progress: #{human_number(total_kills)} / #{human_number(max_kills)} (#{(total_kills * 100.0 / max_kills).round(3)}%)"
+  puts
+end
+
+def sum_kills(masteries)
+  masteries.map do |camo, kills|
+    kills == :complete ? MASTERY[camo] : kills
+  end.sum
 end
 
 def print_row(masteries, mastery, weapon_class_totals)
@@ -131,6 +144,10 @@ def human_duration(ms, threshhold)
     prev_string = "#{prev_value.round 2} #{unit}"
   end
   prev_string
+end
+
+def human_number(number)
+  number.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
 end
 
 start = Time.now
