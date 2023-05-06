@@ -139,7 +139,7 @@ CreateWeaponClassDir(WeaponClass) {
 
 CreateWeaponDir(WeaponClass, WeaponName) {
   global RunDir
-  if (DirExist(RunDir)) {
+  if (DirExist(RunDir . "/" . WeaponClass . "/" . WeaponName)) {
     DirDelete RunDir . "/" . WeaponClass . "/" . WeaponName, 1
   }
   DirCreate RunDir . "/" . WeaponClass . "/" . WeaponName
