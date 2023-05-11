@@ -97,7 +97,9 @@ Weapons := [
       "X13 Auto",
       ".50 GS",
       "P890",
-      "Basilisk"
+      "Basilisk",
+      "FTAC Siege",
+      "GS Magna"
     ]
   }, {
     Name: "Launchers",
