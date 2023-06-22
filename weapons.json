@@ -10,7 +10,8 @@
     "Kastov 545",
     "Chimera",
     "M13B",
-    "ISO Hemlock"
+    "ISO Hemlock",
+    "Tempus Razorback"
   ],
   "Battle Rifles": [
     "Lachmann-762",
@@ -28,7 +29,8 @@
     "Minibak",
     "Bas-P",
     "PDSW 528",
-    "Fennec 45"
+    "Fennec 45",
+    "ISO 45"
   ],
   "Shotguns": [
     "Lockwood 300",
@@ -81,6 +83,7 @@
   "Melee": [
     "Riot Shield",
     "Combat Knife",
-    "Dual Kodachis"
+    "Dual Kodachis",
+    "Tonfa"
   ]
 }

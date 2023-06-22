@@ -25,7 +25,8 @@ Weapons := [
       "Kastov 545",
       "M13B",
       "Taq-56",
-      "ISO Hemlock"
+      "ISO Hemlock",
+      "Tempus Razorback"
     ]
   }, {
     Name: "Battle Rifles",
@@ -47,7 +48,8 @@ Weapons := [
       "Minibak",
       "PDSW 528",
       "Vel 46",
-      "Fennec 45"
+      "Fennec 45",
+      "ISO 45"
     ]
   }, {
     Name: "Light Machine Guns",
@@ -114,7 +116,8 @@ Weapons := [
     Guns: [
       "Riot Shield",
       "Combat Knife",
-      "Dual Kodachis"
+      "Dual Kodachis",
+      "Tonfa"
     ]
   }
 ]
