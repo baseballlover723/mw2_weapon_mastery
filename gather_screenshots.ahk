@@ -152,8 +152,10 @@ GoToChallenges() {
   Send "{F1}"
   Sleep NewScreenTime
 
-  MySend("{Right}", "{Right}", "{Right}", "{Down}", "{Space}")
+  MySend("{Up}", "{Up}")
   ; Select weapon challenges from menu
+  Send "{Space}"
+  Sleep NewScreenTime
   Send "{Space}"
   Sleep NewScreenTime
 }
