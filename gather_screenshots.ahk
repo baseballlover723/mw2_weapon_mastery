@@ -68,7 +68,8 @@ Weapons := [
       "Bryson 800",
       "Bryson 890",
       "Expedite 12",
-      "KV Broadside"
+      "KV Broadside",
+      "MX Guardian"
     ]
   }, {
     Name: "Marksman Rifles",
