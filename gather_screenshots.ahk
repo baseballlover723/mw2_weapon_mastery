@@ -26,7 +26,8 @@ Weapons := [
       "M13B",
       "Taq-56",
       "ISO Hemlock",
-      "Tempus Razorback"
+      "Tempus Razorback",
+      "FR Avancer"
     ]
   }, {
     Name: "Battle Rifles",
@@ -91,7 +92,8 @@ Weapons := [
       "MCPR-300",
       "Victus XMR",
       "Signal 50",
-      "FJX Imperium"
+      "FJX Imperium",
+      "Carrack .300"
     ]
   }, {
     Name: "Handguns",
@@ -156,8 +158,9 @@ GoToChallenges() {
   Send "{F1}"
   Sleep NewScreenTime
 
-  MySend("{Up}", "{Up}")
+  MySend("{Down}", "{Down}")
   ; Select weapon challenges from menu
+  Send "{Space}"
   Send "{Space}"
   Sleep NewScreenTime
   Send "{Space}"
