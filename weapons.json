@@ -32,7 +32,8 @@
     "Bas-P",
     "PDSW 528",
     "Fennec 45",
-    "ISO 45"
+    "ISO 45",
+    "Lachmann Shroud"
   ],
   "Shotguns": [
     "Lockwood 300",
@@ -76,7 +77,8 @@
     "Basilisk",
     "X13 Auto",
     "FTAC Siege",
-    "GS Magna"
+    "GS Magna",
+    "9mm Daemon"
   ],
   "Launchers": [
     "Pila",
@@ -88,6 +90,7 @@
     "Riot Shield",
     "Combat Knife",
     "Dual Kodachis",
-    "Tonfa"
+    "Tonfa",
+    "Pickaxe"
   ]
 }

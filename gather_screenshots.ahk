@@ -51,7 +51,8 @@ Weapons := [
       "PDSW 528",
       "Vel 46",
       "Fennec 45",
-      "ISO 45"
+      "ISO 45",
+      "Lachmann Shroud"
     ]
   }, {
     Name: "Light Machine Guns",
@@ -105,7 +106,8 @@ Weapons := [
       "P890",
       "Basilisk",
       "FTAC Siege",
-      "GS Magna"
+      "GS Magna",
+      "9mm Daemon"
     ]
   }, {
     Name: "Launchers",
@@ -121,7 +123,8 @@ Weapons := [
       "Riot Shield",
       "Combat Knife",
       "Dual Kodachis",
-      "Tonfa"
+      "Tonfa",
+      "Pickaxe"
     ]
   }
 ]
