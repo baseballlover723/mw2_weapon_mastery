@@ -160,6 +160,7 @@ GoToChallenges() {
   Sleep NewScreenTime
 
   MySend("{Down}", "{Down}")
+;  MySend("{Down}")
   ; Select weapon challenges from menu
   Send "{Space}"
   Send "{Space}"
