@@ -27,8 +27,8 @@ Weapons := [
       "Taq-56",
       "ISO Hemlock",
       "Tempus Razorback",
-      "M13C",
-      "FR Avancer"
+      "FR Avancer",
+      "M13C"
     ]
   }, {
     Name: "Battle Rifles",
