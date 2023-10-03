@@ -27,8 +27,9 @@ Weapons := [
       "Taq-56",
       "ISO Hemlock",
       "Tempus Razorback",
+      "M13C",
       "FR Avancer",
-      "M13C"
+      "TR-76 Geist"
     ]
   }, {
     Name: "Battle Rifles",
@@ -52,7 +53,8 @@ Weapons := [
       "Vel 46",
       "Fennec 45",
       "ISO 45",
-      "Lachmann Shroud"
+      "Lachmann Shroud",
+      "ISO 9mm"
     ]
   }, {
     Name: "Light Machine Guns",
@@ -124,7 +126,8 @@ Weapons := [
       "Combat Knife",
       "Dual Kodachis",
       "Tonfa",
-      "Pickaxe"
+      "Pickaxe",
+      "Dual Kamas"
     ]
   }
 ]

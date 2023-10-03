@@ -13,7 +13,8 @@
     "ISO Hemlock",
     "Tempus Razorback",
     "M13C",
-    "FR Avancer"
+    "FR Avancer",
+    "TR-76 Geist"
   ],
   "Battle Rifles": [
     "Lachmann-762",
@@ -33,7 +34,8 @@
     "PDSW 528",
     "Fennec 45",
     "ISO 45",
-    "Lachmann Shroud"
+    "Lachmann Shroud",
+    "ISO 9mm"
   ],
   "Shotguns": [
     "Lockwood 300",
@@ -91,6 +93,7 @@
     "Combat Knife",
     "Dual Kodachis",
     "Tonfa",
-    "Pickaxe"
+    "Pickaxe",
+    "Dual Kamas"
   ]
 }
